@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Zo doen we dat bij Blinqx – Onze cultuur</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --tekst:#1D2632; --tekst2:#4A515B; --achtergrond:#F4F7F9;
+    --rand:#C5DBE3; --accent:#6DA6B9; --geel:#FFCD00; --wit:#FFFFFF;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--achtergrond);color:var(--tekst);font-family:Montserrat,Arial,sans-serif;font-size:16px;line-height:1.65}
+  .pagina{max-width:760px;margin:0 auto;padding:56px 24px 80px}
+  header{margin-bottom:56px}
+  .kop{font-size:13px;font-weight:600;color:var(--accent);margin:0 0 14px}
+  h1{font-size:40px;line-height:1.1;font-weight:800;margin:0 0 20px;letter-spacing:-.5px}
+  h1 mark{background:linear-gradient(transparent 62%,var(--geel) 62%);color:inherit;padding:0 2px}
+  .intro{font-size:18px;color:var(--tekst2);margin:0}
+  .waarden{display:flex;flex-wrap:wrap;gap:8px;margin:28px 0 0;padding:0;list-style:none}
+  .waarden a{display:inline-block;padding:8px 14px;border:1px solid var(--rand);border-radius:999px;background:var(--wit);color:var(--tekst);text-decoration:none;font-weight:600;font-size:14px}
+  .waarden a:hover,.waarden a:focus-visible{border-color:var(--accent);outline:none}
+  section.waarde{background:var(--wit);border:1px solid var(--rand);border-radius:8px;padding:36px 36px 28px;margin-bottom:24px}
+  section.waarde h2{font-size:28px;font-weight:800;margin:0 0 4px;letter-spacing:-.3px}
+  .motto{color:var(--accent);font-weight:600;margin:0 0 20px}
+  .waarde p{margin:0 0 16px}
+  .drieluik{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:24px}
+  .drieluik h3{font-size:15px;font-weight:600;margin:0 0 8px;padding-bottom:6px;border-bottom:2px solid var(--geel);display:inline-block}
+  .drieluik ul{margin:0;padding-left:18px;color:var(--tekst2);font-size:15px}
+  .drieluik li{margin-bottom:6px}
+  .nietzo{margin-top:22px;padding:14px 18px;background:var(--achtergrond);border-left:4px solid var(--accent);border-radius:0 6px 6px 0;font-size:15px;color:var(--tekst2)}
+  .nietzo strong{color:var(--tekst)}
+  .belofte{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:24px}
+  .belofte h3{font-size:15px;font-weight:600;margin:0 0 8px;padding-bottom:6px;border-bottom:2px solid var(--geel);display:inline-block}
+  .belofte ul{margin:0;padding-left:18px;color:var(--tekst2);font-size:15px}
+  .belofte li{margin-bottom:6px}
+  .belofte b{color:var(--tekst);font-weight:600}
+  @media (max-width:600px){.belofte{grid-template-columns:1fr}}
+  section.toets{margin-top:48px;padding:36px;background:var(--tekst);color:var(--wit);border-radius:8px}
+  section.toets h2{font-size:24px;font-weight:800;margin:0 0 12px}
+  section.toets p{margin:0 0 18px;color:#D7DEE5}
+  section.toets ol{margin:0;padding-left:22px}
+  section.toets li{margin-bottom:10px}
+  section.toets li::marker{color:var(--geel);font-weight:800}
+  footer{margin-top:40px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;color:var(--tekst2);font-size:13px}
+  button{font:inherit;font-weight:600;background:var(--geel);color:var(--tekst);border:0;border-radius:6px;padding:12px 20px;cursor:pointer}
+  button:hover{filter:brightness(.95)}
+  button:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+  @media (max-width:600px){h1{font-size:30px}.drieluik{grid-template-columns:1fr}section.waarde,section.toets{padding:24px 20px}}
+  .tabs{max-width:760px;margin:0 auto;padding:16px 24px 0;display:flex;gap:6px;border-bottom:1px solid var(--rand)}
+  .tabs a{display:inline-block;padding:10px 16px;font-weight:600;font-size:14px;color:var(--tekst2);text-decoration:none;border:1px solid transparent;border-bottom:0;border-radius:8px 8px 0 0;margin-bottom:-1px}
+  .tabs a.actief{background:var(--wit);color:var(--tekst);border-color:var(--rand)}
+  .tabs a:hover:not(.actief){color:var(--tekst)}
+  .tabs a:focus-visible{outline:3px solid var(--accent);outline-offset:-3px}
+  @media print{.tabs{display:none}body{background:#fff}section.waarde{break-inside:avoid;border-color:#999}button{display:none}}
+</style>
+</head>
+<body>
+<nav class="tabs" aria-label="Pagina's">
+  <a class="actief" href="index.html" aria-current="page">Onze cultuur</a>
+  <a href="kaartjes.html">Kaartjes &amp; Tegeltjes</a>
+</nav>
+<div class="pagina" id="document">
+
+<header>
+  <p class="kop">Blinqx Verzekering &amp; Hypotheek — Onze cultuur</p>
+  <h1>Zo doen we dat <mark>bij Blinqx</mark></h1>
+  <p class="intro">Blinqx maakt software voor hypotheek- en verzekeringsadviseurs. Onze klanten zijn de kantoren die dagelijks met ons platform werken. Dit zijn onze waarden, de manier waarop we klanten bedienen en wat je van Blinqx zelf mag verwachten. Ze beschrijven hoe we met elkaar omgaan, hoe we met klanten omgaan en hoe we keuzes maken. Ze zijn geen poster voor aan de muur, maar een toets voor elk besluit: past dit bij ons?</p>
+  <ul class="waarden">
+    <li><a href="#klaretaal">Klare taal</a></li>
+    <li><a href="#samen">Samen slimmer</a></li>
+    <li><a href="#regelen">We regelen het</a></li>
+    <li><a href="#nieuwsgierig">Nieuwsgierig</a></li>
+    <li><a href="#betrouwbaar">Betrouwbaar, altijd</a></li>
+    <li><a href="#jezelf">Gewoon jezelf</a></li>
+    <li><a href="#service">Service is sales</a></li>
+    <li><a href="#belofte">Onze belofte</a></li>
+    <li><a href="#vieren">Vieren en leren</a></li>
+    <li><a href="#teruggeven">Iets teruggeven</a></li>
+    <li><a href="#werkgever">Blinqx als werkgever</a></li>
+  </ul>
+</header>
+
+<section class="waarde" id="klaretaal">
+  <h2>Klare taal</h2>
+  <p class="motto">Zeg wat je bedoelt, zonder kleine lettertjes</p>
+  <p>Hypotheken en verzekeringen zitten vol jargon. Wij niet. We leggen dingen uit zoals we ze aan onze eigen familie zouden uitleggen: in gewone woorden, met het antwoord vooraan. Als iets niet kan, zeggen we dat. Als we iets niet weten, zeggen we dat ook — en we zoeken het uit.</p>
+  <div class="drieluik">
+    <div><h3>Met collega's</h3><ul>
+      <li>We zeggen wat we vinden, direct tegen de persoon zelf en niet erover in de wandelgang.</li>
+      <li>Feedback gaat over het werk, niet over de mens.</li>
+      <li>Een mail of ticket begint met de conclusie. De onderbouwing komt daarna.</li>
+    </ul></div>
+    <div><h3>Met klanten</h3><ul>
+      <li>Geen verrassingen achteraf: prijs, looptijd en voorwaarden staan vooraf helder op papier.</li>
+      <li>We schrijven in de taal van de klant, niet van de software of de polis.</li>
+      <li>Slecht nieuws brengen we snel en zelf. Niet via een automatische melding.</li>
+    </ul></div>
+  </div>
+  <div class="nietzo"><strong>Zo dus niet:</strong> een release-note vol technische termen sturen en denken dat de klant het wel begrijpt.</div>
+</section>
+
+<section class="waarde" id="samen">
+  <h2>Samen slimmer</h2>
+  <p class="motto">Eén team, ook met onze partners</p>
+  <p>Blinqx is een ketenspeler. Niemand van ons kan het alleen: niet de developer zonder de adviseur, niet de adviseur zonder de geldverstrekker, niet de accountmanager zonder support. We delen kennis royaal, vragen hulp zonder gêne en vieren successen als team. De beste oplossing wint, niet de hoogste functie.</p>
+  <div class="drieluik">
+    <div><h3>Met collega's</h3><ul>
+      <li>Je mag altijd bij iemand binnenlopen. Ook bij de directie.</li>
+      <li>Kennis houd je niet voor jezelf; documenteer het en deel het.</li>
+      <li>We spreken over "wij" en "ons product", niet over "zij van ontwikkeling", "hij van sales" of "zij van de administratie".</li>
+    </ul></div>
+    <div><h3>Met klanten</h3><ul>
+      <li>Klanten en partners zijn medebouwers. We betrekken ze vroeg en vragen echt om hun mening.</li>
+      <li>Een probleem van de klant is ons probleem, ook als het bij een andere ketenpartij ligt.</li>
+      <li>We concurreren op kwaliteit, nooit door anderen zwart te maken.</li>
+    </ul></div>
+  </div>
+  <div class="nietzo"><strong>Zo dus niet:</strong> een klantvraag doorzetten met "dat is niet mijn afdeling" en er niet meer naar omkijken.</div>
+</section>
+
+<section class="waarde" id="regelen">
+  <h2>We regelen het</h2>
+  <p class="motto">Afspraak is afspraak, en dan liever vandaag</p>
+  <p>Een idee is pas iets waard als het gebouwd is. Een belofte pas als hij is nagekomen. We houden van korte lijnen, kleine stappen en snelle beslissingen. Liever vandaag 80% live en morgen bijsturen dan over drie maanden 100% perfect. Fouten maken mag; ze verzwijgen niet.</p>
+  <div class="drieluik">
+    <div><h3>Met collega's</h3><ul>
+      <li>Zeg wat je gaat doen en wanneer. Haal je het niet, meld het vóór de deadline.</li>
+      <li>Vergaderingen eindigen met wie-doet-wat-wanneer, of ze hadden niet hoeven plaatsvinden.</li>
+      <li>Zie je iets kapot? Dan is het van jou totdat het gefikst is of belegd is.</li>
+    </ul></div>
+    <div><h3>Met klanten</h3><ul>
+      <li>Elke vraag krijgt dezelfde werkdag een reactie, ook als het antwoord "we zoeken het uit" is.</li>
+      <li>We zetten liever één extra stap dan dat we een klant naar een formulier verwijzen.</li>
+      <li>Uitzonderingen zijn er om gemaakt te worden, als het de klant echt helpt en netjes vastgelegd wordt.</li>
+    </ul></div>
+  </div>
+  <div class="nietzo"><strong>Zo dus niet:</strong> een bug drie sprints laten liggen omdat niemand hem expliciet heeft opgepakt.</div>
+</section>
+
+<section class="waarde" id="nieuwsgierig">
+  <h2>Nieuwsgierig</h2>
+  <p class="motto">"Zo doen we dat altijd" is nooit een argument</p>
+  <p>De hypotheek- en verzekeringswereld verandert snel: nieuwe regels, nieuwe technologie, nieuwe verwachtingen van klanten. Wij willen vooroplopen, niet achteraan aansluiten. Dat vraagt om mensen die vragen blijven stellen, buiten hun eigen vak kijken en nieuwe dingen uitproberen voordat de markt erom vraagt.</p>
+  <div class="drieluik">
+    <div><h3>Met collega's</h3><ul>
+      <li>Een domme vraag bestaat niet. Wel een vraag die je te lang niet stelt.</li>
+      <li>Iedereen mag experimenteren; we spreken vooraf af hoe we het meten en wanneer we stoppen.</li>
+      <li>Leren van een mislukking telt net zo zwaar als een geslaagd project.</li>
+    </ul></div>
+    <div><h3>Met klanten</h3><ul>
+      <li>We kijken mee bij de adviseur: hoe werkt hij écht, waar loopt hij vast?</li>
+      <li>Nieuwe technologie zetten we in als het de klant tijd of fouten bespaart, niet omdat het kan.</li>
+      <li>Kritiek van een klant is gratis onderzoek. We bedanken ervoor en doen er iets mee.</li>
+    </ul></div>
+  </div>
+  <div class="nietzo"><strong>Zo dus niet:</strong> een verbetervoorstel afwijzen met "dat hebben we in 2019 al eens geprobeerd".</div>
+</section>
+
+<section class="waarde" id="betrouwbaar">
+  <h2>Betrouwbaar, altijd</h2>
+  <p class="motto">Mensen vertrouwen ons hun grootste financiële beslissing toe</p>
+  <p>Achter elk dossier in ons platform zit een gezin, een huis, een toekomst. Dat vertrouwen verdien je elke dag opnieuw: met software die het gewoon doet, met zorgvuldig omgaan met klantdata en met eerlijkheid over wat ons platform wel en niet kan. Snel is goed, maar nooit ten koste van zorgvuldig.</p>
+  <div class="drieluik">
+    <div><h3>Met collega's</h3><ul>
+      <li>Twijfel je of iets mag (privacy, beveiliging, wet- en regelgeving)? Vraag het vóór je het doet.</li>
+      <li>We spreken elkaar aan op slordigheid, vriendelijk en direct.</li>
+      <li>Wat je in vertrouwen hoort, blijft in vertrouwen.</li>
+    </ul></div>
+    <div><h3>Met klanten</h3><ul>
+      <li>Klantdata gebruiken we alleen waarvoor de klant ons toestemming gaf.</li>
+      <li>We verkopen wat de klant nodig heeft, geen modules die hij niet gaat gebruiken.</li>
+      <li>Gaat er iets mis, dan melden we het zelf, leggen we uit wat we doen en herstellen we het.</li>
+    </ul></div>
+  </div>
+  <div class="nietzo"><strong>Zo dus niet:</strong> een release doordrukken op vrijdagmiddag omdat de deadline "toch al gecommuniceerd was".</div>
+</section>
+
+<section class="waarde" id="jezelf">
+  <h2>Gewoon jezelf</h2>
+  <p class="motto">Je hoeft geen pak aan om serieus genomen te worden</p>
+  <p>Blinqx'ers zijn geen uniform. De een is druk en luidruchtig, de ander stil en precies. De een komt in een net overhemd, de ander in een hoodie. Dat mag allemaal, want een klant merkt binnen een minuut of hij met een echt mens praat of met een script. Humor hoort erbij. Een kantoor waar niet gelachen wordt, levert ook geen goede software. En wie zichzelf mag zijn, durft ook te zeggen wat hij vindt, en dat hebben we nodig.</p>
+  <div class="drieluik">
+    <div><h3>Met collega's</h3><ul>
+      <li>Niemand hoeft zich anders voor te doen om mee te tellen. Stil of luidruchtig, allebei waardevol.</li>
+      <li>Een grap op zijn tijd is prima. Een grap ten koste van iemand niet.</li>
+      <li>Je mag zeggen dat je iets niet weet, iets niet snapt of het ergens niet mee eens bent. Ook tegen de directie.</li>
+      <li>Titels doen er weinig toe. Het beste idee wint, van wie het ook komt.</li>
+    </ul></div>
+    <div><h3>Met klanten</h3><ul>
+      <li>Praat zoals je praat. Klanten onthouden de mens, niet de functietitel.</li>
+      <li>Onze e-mails, nieuwsbrieven en handleidingen klinken als een Blinqx'er, niet als een juridische afdeling.</li>
+      <li>Bij een kantoorbezoek of demo hoef je geen show op te voeren. Eerlijk laten zien wat het platform doet, werkt beter.</li>
+    </ul></div>
+  </div>
+  <div class="nietzo"><strong>Zo dus niet:</strong> een release-mail beginnen met "Geachte relatie, hierbij informeren wij u" terwijl je die klant vorige week nog tutoyeerde aan de telefoon.</div>
+</section>
+
+<section class="waarde" id="service">
+  <h2>Service is sales</h2>
+  <p class="motto">We hebben geen salesafdeling, we hebben accountmanagement</p>
+  <p>Bij een SaaS-bedrijf verkoop je niet één keer, maar elke maand opnieuw. Een klant blijft omdat het werkt en omdat hij zich gehoord voelt, niet omdat een verkoper hem ooit heeft overtuigd. Daarom noemen we het geen sales, maar accountmanagement. De beste verkoop is een klant die een collega-kantoor vertelt hoe goed hij geholpen wordt.</p>
+  <div class="drieluik">
+    <div><h3>Met collega's</h3><ul>
+      <li>De accountmanager brengt de klantvraag intern weg en blijft eigenaar tot het geregeld is.</li>
+      <li>Support, ontwikkeling en accountmanagement werken vanuit hetzelfde klantbeeld; niemand hoeft een klant te vragen "wat was uw vraag ook alweer?".</li>
+      <li>Een goede klant behouden telt intern net zo zwaar als een nieuwe binnenhalen.</li>
+    </ul></div>
+    <div><h3>Met klanten</h3><ul>
+      <li>Jij blijft het aanspreekpunt. De klant hoeft nooit zelf uit te zoeken bij wie hij moet zijn.</li>
+      <li>Jij zorgt dat alles intern netjes voor de klant geregeld wordt en koppelt terug, ook als het langer duurt.</li>
+      <li>Elke klant, groot of klein, krijgt dezelfde behandeling. Eén adviseur telt net zo hard als een keten met vijftig vestigingen.</li>
+      <li>Een klacht is een kans die je krijgt om het beter te doen. Bedank ervoor, los het op en laat zien wat er is veranderd.</li>
+      <li>Een klant die ons aanbeveelt bij een collega-kantoor of een goede review geeft, krijgt een persoonlijk bedankje van jou. Geen kortingscode, geen standaardmail.</li>
+    </ul></div>
+  </div>
+  <div class="nietzo"><strong>Zo dus niet:</strong> na het tekenen van het contract de klant overdragen aan "support" en pas weer bellen als de licentie verlengd moet worden.</div>
+</section>
+
+<section class="waarde" id="belofte">
+  <h2>Wat je van ons mag verwachten</h2>
+  <p class="motto">Onze belofte aan elke klant, groot of klein</p>
+  <p>Goed accountmanagement is een strategische partner die helpt je kantoor te laten groeien, geen ordertrapper die pas belt als de factuur eraan komt. We bouwen aan een langetermijnrelatie, bewaken de kwaliteit en dragen zelf oplossingen aan. Concreet mag je dit van ons verwachten:</p>
+  <div class="belofte">
+    <div><h3>Relatie en communicatie</h3><ul>
+      <li><b>Vast aanspreekpunt.</b> Eén gezicht dat jouw kantoor, werkwijze en markt door en door kent.</li>
+      <li><b>Proactief contact.</b> We bellen niet alleen bij een factuur of verlenging, maar nemen zelf het initiatief om te horen hoe het gaat.</li>
+      <li><b>Snelle reactie.</b> Binnen een afgesproken termijn antwoord op vragen, offertes en escalaties.</li>
+    </ul></div>
+    <div><h3>Strategie en groei</h3><ul>
+      <li><b>Meedenken met je business.</b> We kennen je doelen en helpen processen te versnellen of kosten te besparen.</li>
+      <li><b>Periodieke evaluatie.</b> Vaste voortgangsgesprekken over gebruik, resultaten en de samenwerking.</li>
+      <li><b>Kennisdeling.</b> Updates over markttrends, nieuwe wetgeving en innovaties die jouw kantoor raken.</li>
+    </ul></div>
+    <div><h3>Problemen en escalatie</h3><ul>
+      <li><b>Interne belangenbehartiger.</b> Gaat er intern iets mis, dan vecht je accountmanager achter de schermen voor jouw prioriteit.</li>
+      <li><b>Klachten oplossen.</b> Snel en constructief, gericht op een oplossing waar we allebei verder mee kunnen.</li>
+    </ul></div>
+    <div><h3>Commercie en contracten</h3><ul>
+      <li><b>Transparante offertes.</b> Duidelijke, marktconforme voorstellen zonder verborgen kosten.</li>
+      <li><b>Tijdige verlengingen.</b> Geen last-minute verrassingen bij het aflopen van een contract, maar ruim op tijd een voorstel voor de toekomst.</li>
+    </ul></div>
+  </div>
+  <h3 style="font-size:18px;font-weight:800;margin:32px 0 6px">Blinqx-momentjes</h3>
+  <p>Responstijden en evaluaties zijn de basis. Het verschil zit in het kleine: een gebaar dat niemand van je verwacht, dat je een minuut kost en dat de ander nog maanden onthoudt. Dat noemen we een Blinqx-momentje. Ze zijn er voor klanten én voor collega's, want wie zelf gezien wordt, ziet de klant ook. Iedereen kan ze maken, op elke plek in het bedrijf. En het mooie: je wordt er zelf ook blij van. We houden ze zichtbaar: in het teamkanaal deel je momentjes die je kreeg of gaf, en in elk maandoverleg vertelt iemand er eentje. Niet om te scoren, maar omdat je van een goed voorbeeld zelf ook op ideeën komt.</p>
+  <div class="drieluik">
+    <div><h3>Voor klanten</h3><ul>
+      <li>Stuur een kaartje naar een klant. Handgeschreven, zonder aanleiding, of juist bij een verhuizing, jubileum of nieuwe vestiging.</li>
+      <li>Bel terug met goed nieuws vóórdat de klant erom vraagt: de bug is opgelost, de koppeling staat live.</li>
+      <li>Hoor je iets persoonlijks (een marathon, een kind op komst)? Kom er de volgende keer op terug.</li>
+      <li>Loop bij een kantoorbezoek even langs de binnendienst, niet alleen langs de eigenaar.</li>
+      <li>Iemand die net is gestart bij een klantkantoor: bel hem de eerste week even op om te vragen of hij zijn weg vindt in het platform.</li>
+      <li>Geef een boom cadeau in het Hypotheekbos, of nodig de klant uit voor de bomenplantdag.</li>
+    </ul></div>
+    <div><h3>Voor collega's</h3><ul>
+      <li>Zet koffie voor iemand die er nog niet om vroeg. Of neem iets lekkers mee na een zware week.</li>
+      <li>Zeg het hardop als een collega iets goed heeft gedaan. Liefst waar anderen bij zijn, of in een berichtje aan zijn leidinggevende.</li>
+      <li>Een collega die vastzit: ga er even naast zitten in plaats van een ticket door te schuiven.</li>
+      <li>Nieuwe collega? Vraag hem de eerste week mee te lunchen en stel hem voor aan mensen buiten zijn eigen team.</li>
+      <li>Een collega heeft een druk weekend of een zieke thuis? Vraag er maandag naar.</li>
+      <li>Neem een taak over als iemand met de handen in het haar zit, zonder erbij te zeggen dat je dat doet.</li>
+      <li>Geef een klantcompliment door aan de collega die het werk deed. Het komt vaak bij accountmanagement binnen, maar hoort bij support of ontwikkeling terecht te komen.</li>
+      <li>Verjaardag, jubileum, geslaagd voor een examen: een kaartje of een berichtje. Ook van collega's die niet in je eigen team zitten.</li>
+    </ul></div>
+  </div>
+  <div class="nietzo"><strong>Zo dus niet:</strong> een klant pas horen bij de verlenging en dan ontdekken dat hij al drie maanden ontevreden is.</div>
+</section>
+
+<section class="waarde" id="vieren">
+  <h2>Vieren, leren en luisteren</h2>
+  <p class="motto">Goed nieuws delen we hardop, fouten ook</p>
+  <p>Wat je viert, krijg je meer van. Daarom maken we van successen een gewoonte en van fouten een les in plaats van een geheim. En omdat we software bouwen voor mensen die we lang niet allemaal dagelijks spreken, halen we de klant zelf regelmatig naar binnen.</p>
+  <div class="drieluik">
+    <div><h3>Successen vieren</h3><ul>
+      <li>Nieuwe klant, koppeling live, lastige klacht opgelost: de bel gaat, het bericht gaat in het teamkanaal en de naam van wie het deed staat erbij.</li>
+      <li>Elke vrijdag sluiten we de week af met drie dingen die goed gingen. Klein of groot.</li>
+      <li>Een mijlpaal van een klant (100e dossier, nieuwe vestiging) vieren we mee, niet alleen onze eigen.</li>
+    </ul></div>
+    <div><h3>Fouten als les</h3><ul>
+      <li>Na een storing of misser bespreken we wat er gebeurde en wat we anders doen. Nooit wie de schuld heeft.</li>
+      <li>De "les van de maand": iemand vertelt wat er misging en wat het opleverde. Wie hem vertelt, krijgt applaus, geen preek.</li>
+      <li>Een fout die je zelf meldt, telt nooit tegen je. Een fout die je verzwijgt wel.</li>
+    </ul></div>
+    <div><h3>De klant aan tafel</h3><ul>
+      <li>Elke maand komt een klant vertellen hoe hij écht met ons platform werkt. Ontwikkeling en support zitten vooraan.</li>
+      <li>Iedere developer loopt minimaal één dag per jaar mee op een adviseurskantoor.</li>
+      <li>Klantfeedback uit support, accountmanagement en reviews komt op één plek samen en wordt elk kwartaal met het hele bedrijf gedeeld.</li>
+    </ul></div>
+    <div><h3>Zo dus niet</h3><ul>
+      <li>Een storing intern afdoen met "het is opgelost" en nooit meer bespreken hoe het kon gebeuren.</li>
+      <li>Alleen de deals vieren en niet de opgeloste klachten.</li>
+      <li>Een jaar lang bouwen zonder één klant in de ogen te hebben gekeken.</li>
+    </ul></div>
+  </div>
+</section>
+
+<section class="waarde" id="teruggeven">
+  <h2>Iets teruggeven</h2>
+  <p class="motto">We planten bomen in het Hypotheekbos</p>
+  <p>Ons werk draait om huizen, en huizen staan in een omgeving. Daarom planten we bomen in het Hypotheekbos (hypotheekbos.nl). Geen compensatiecertificaat op een factuur, maar echte bomen op een echte plek, waar je naartoe kunt en waar je over tien jaar kunt zien wat er is gegroeid. Een boom is ook het mooiste Blinqx-momentje dat we hebben: hij kost weinig, hij is persoonlijk en hij blijft.</p>
+  <div class="drieluik">
+    <div><h3>Met collega's</h3><ul>
+      <li>Eén keer per jaar gaan we met elkaar bomen planten. Modder, koffie, laarzen en geen laptop.</li>
+      <li>Nieuwe collega? Dan plant Blinqx een boom op zijn of haar naam. Zo staat iedereen letterlijk in het bos.</li>
+      <li>Een collega die iets bijzonders heeft gedaan of een jubileum viert, krijgt een boom in plaats van een bos bloemen.</li>
+    </ul></div>
+    <div><h3>Met klanten</h3><ul>
+      <li>Geef een klant een boom cadeau: bij een nieuwe samenwerking, een jubileum, een verhuizing of gewoon als bedankje.</li>
+      <li>Nodig klanten uit voor de bomenplantdag. Samen in het bos leer je elkaar beter kennen dan in welke vergaderzaal ook.</li>
+      <li>Vertel erover in gesprekken, maar maak er geen verkoopargument van. Het is iets wat we doen, geen reden om ons te kiezen.</li>
+    </ul></div>
+  </div>
+  <div class="nietzo"><strong>Zo dus niet:</strong> "wij planten een boom per licentie" op de website zetten en daarna nooit meer naar het bos gaan.</div>
+</section>
+
+<section class="waarde" id="werkgever">
+  <h2>Wat je van Blinqx mag verwachten</h2>
+  <p class="motto">Dezelfde belofte als aan onze klanten, maar dan naar binnen</p>
+  <p>Wie zelf goed behandeld wordt, behandelt klanten goed. Daarom krijg je van Blinqx en van je leidinggevende precies wat we een klant beloven: een vast aanspreekpunt, proactief contact, snelle reacties en iemand die achter de schermen voor jou opkomt.</p>
+  <div class="belofte">
+    <div><h3>Relatie en communicatie</h3><ul>
+      <li><b>Vast aanspreekpunt.</b> Eén leidinggevende die weet waar je aan werkt, wat je goed kunt en wat je wilt leren.</li>
+      <li><b>Proactief contact.</b> Je leidinggevende wacht niet op het jaargesprek, maar vraagt regelmatig hoe het gaat. Ook als er niets aan de hand is.</li>
+      <li><b>Snelle reactie.</b> Een vraag aan je leidinggevende of aan HR krijgt binnen een werkdag antwoord, ook als het antwoord "ik zoek het uit" is.</li>
+      <li><b>Buddy in je eerste weken.</b> Een collega buiten je eigen team die je wegwijs maakt en bij wie je alles mag vragen.</li>
+    </ul></div>
+    <div><h3>Ontwikkeling en groei</h3><ul>
+      <li><b>Meedenken met jouw loopbaan.</b> Minstens één keer per jaar een gesprek dat niet over je functie gaat, maar over wat jij wilt.</li>
+      <li><b>Tijd en budget om te leren.</b> Cursussen, congressen, vakliteratuur: als het je beter maakt in je werk, is het antwoord in principe ja.</li>
+      <li><b>Kennissessies.</b> Collega's delen regelmatig wat ze geleerd hebben, over ons product, de hypotheekmarkt of nieuwe technologie.</li>
+    </ul></div>
+    <div><h3>Problemen en escalatie</h3><ul>
+      <li><b>Iemand die voor je opkomt.</b> Zit je klem tussen teams, prioriteiten of een lastige klant? Je leidinggevende lost het op of legt het hogerop, en laat jou niet bungelen.</li>
+      <li><b>Eerlijk gesprek als het niet goed gaat.</b> Feedback krijg je op tijd en direct, nooit voor het eerst in een beoordelingsgesprek.</li>
+    </ul></div>
+    <div><h3>Afspraken en zekerheid</h3><ul>
+      <li><b>Duidelijke afspraken.</b> Over salaris, uren, thuiswerken en verlof staat alles helder op papier. Geen kleine lettertjes, ook niet intern.</li>
+      <li><b>Tijdig duidelijkheid.</b> Bij een contract dat afloopt of een verandering van rol hoor je ruim van tevoren waar je aan toe bent.</li>
+      <li><b>Ruimte voor het leven.</b> Een ziek kind, een verhuizing, een slechte week: dat regelen we, zonder dat je er een formulier voor hoeft in te vullen.</li>
+    </ul></div>
+  </div>
+  <div class="nietzo"><strong>Zo dus niet:</strong> een collega een jaar laten werken zonder één gesprek over hoe het gaat, en dan verbaasd zijn als hij vertrekt.</div>
+</section>
+
+<section class="toets">
+  <h2>Zo gebruiken we deze waarden</h2>
+  <p>Bij elke keuze, hoe klein ook, kun je deze zeven vragen stellen. Is het antwoord op één ervan "nee", dan is het besluit nog niet klaar.</p>
+  <ol>
+    <li>Kan ik dit in gewone taal uitleggen aan de klant en aan mijn collega?</li>
+    <li>Heb ik de mensen betrokken die hiermee moeten werken?</li>
+    <li>Is duidelijk wie het doet en wanneer het af is?</li>
+    <li>Hebben we een betere manier overwogen, of doen we dit omdat we het altijd zo deden?</li>
+    <li>Zou ik dit ook doen als de klant erbij zat, en ook voor onze kleinste klant?</li>
+    <li>Service is sales: helpt dit de klant, en dus ons?</li>
+    <li>Zou ik dit zelf ook willen, en word ik er zelf ook blij van?</li>
+  </ol>
+</section>
+
+<footer>
+  <span>Blinqx Verzekering &amp; Hypotheek — versie september 2026</span>
+  <button type="button" onclick="printDocument()">Print of bewaar als PDF</button>
+</footer>
+
+</div>
+<script>
+  function printDocument(){
+    var w=window.open('','_blank');
+    w.document.write('<!DOCTYPE html><html lang="nl"><head><meta charset="UTF-8"><title>Zo doen we dat bij Blinqx</title>'+
+      document.querySelector('link[href*="fonts.googleapis"]').outerHTML+document.querySelector('style').outerHTML+
+      '</head><body>'+document.getElementById('document').outerHTML+'</body></html>');
+    w.document.close();
+    w.focus();
+    setTimeout(function(){w.print();},500);
+  }
+</script>
+</body>
+</html>
